@@ -15,11 +15,11 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h5 class="mt-3">${product?.title?.slice(0, 45)}</h5>
+      <h5 class="mt-3">${product?.title?.slice(0, 30)}</h5>
       <p>Category: ${product?.category}</p>
       <h6> <span class="rating"><i class="fas fa-users"></i> ${product?.rating?.count}</span> <span class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>  ${product?.rating?.rate}</span> </h6>
       <h5 class="mb-3">Price: $ ${product?.price}</h5>
-      <button onclick="addToCart('price',${product?.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+      <button onclick="addToCart('price',${product?.price})" id="addToCart-btn" class="buy-now btn btn-primary">add to cart</button>
       <button id="details-btn" class="btn btn-secondary">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
